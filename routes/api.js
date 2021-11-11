@@ -47,3 +47,7 @@ WORKOUT.Workout.findByIdAndUpdate(
 .then((workout)=> res.json(workout))
 .catch((err) => res.status(400).json(err))
 );
+
+router.get("/exercise", (req, res) =>
+  res.sendFile(path.join(__dirname, "../public/exercise.html"))
+);
