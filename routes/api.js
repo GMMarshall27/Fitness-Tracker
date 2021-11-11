@@ -33,3 +33,8 @@ WORKOUT.Workout.aggregate([
 .then((workout)=> res.json(workout))
 .catch((err) => res.status(400).json(err))
 );
+router.post("/api/workouts/",(req,res)=>
+WORKOUT.Workout.create({})
+.then((workout)=> res.json(workout))
+.catch((err) => res.status(400).json(err))
+);
